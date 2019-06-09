@@ -1,12 +1,15 @@
 #Challenge Makefile
 
 start:
-#TODO: commands necessary to start the API
-go run C:/GoWork/src/companyProject/
+go run companyProject/
 
 check:
-#TODO: include command to test the code and show the results
-go test -v C:/GoWork/src/companyProject/tests
+go test -v companyProject/tests
 
 #setup:
-#if needed to setup the enviroment before starting it
+go get -u github.com/gorilla/mux
+go get go.mongodb.org/mongo-driver/bson
+go get go.mongodb.org/mongo-driver/bson/primitive
+go get go.mongodb.org/mongo-driver/mongo
+go get go.mongodb.org/mongo-driver/mongo/options
+go install companyProject
