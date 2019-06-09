@@ -19,7 +19,7 @@ const (
 	URI = "mongodb+srv://admin:admin@cluster0-nrksu.mongodb.net/test?retryWrites=true&w=majority"
 	DATABASE = "companyDB"
     COLLECTION = "companies"
-    FILEPATH = "C:/GoWork/src/companyProject/files/"
+    FILEPATH = "/src/companyProject/files/"
 )
 
 var db *mongo.Database
@@ -253,7 +253,7 @@ func UploadFile(fileName string) error{
 }
 
 func GetFullFilePath(fileName string) string{
-    return FILEPATH + fileName;
+    return os.Getenv("GOPATH") + FILEPATH + fileName;
 }
 
 func BuildFilter(companyName string, companyZip string) bson.M {

@@ -10,6 +10,7 @@ The "website' value will be added within the existing records when the "name" an
 
 ## Notes
 
+- The 'companyProject' shall be cloned within '$GOPATH/src'
 - Before start the application, run the test case contained within 'src/companyProject/tests'. Thereby, verifying if the API's are working correctly.
 - The file "Makefile" contains the commands to start/test the API
 - The folder "files" contains the files to be imported
